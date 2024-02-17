@@ -26,7 +26,7 @@ body{
 .player{
     width: 55vh;
     height: 100vh;
-background-color: rgb(177 162 245);
+background-color: rgb(162, 206, 243);
 border-radius: 30px ;
 display: flex;
 align-items: center;
