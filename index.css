@@ -32,6 +32,7 @@ display: flex;
 align-items: center;
 flex-direction: column;
 margin: auto;
+    border: 10px solid black;
 }
 .Details{
    margin-top: 35px;
