@@ -124,4 +124,14 @@ margin: auto;
     body{
         background-color:black;
     }
+     .player{
+        height: 97vh;
+        width: 43vh;
+    }
+    #slider{
+        width:40vh ;
+    }
+    #dur_initial {
+        margin-right: 245px;
+    }
 }
