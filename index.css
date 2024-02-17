@@ -123,7 +123,7 @@ margin: auto;
 }
 @media only screen and (max-width:520px) {
     body{
-        background-color:black;
+        background-color:rgb(59, 59, 59);
     }
      .player{
         height: 90vh;
