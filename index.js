@@ -26,7 +26,9 @@ slider.value=song.currentTime;
 }
 slider.onchange=function(){
     song.play();
-    song.currentTime=slider.value
+    song.currentTime=slider.value;
+     play.classList.add("fa-pause");
+        play.classList.remove("fa-play");
 }
 setInterval(()=>{
 // minute=Math.floor(song.currentTime);
