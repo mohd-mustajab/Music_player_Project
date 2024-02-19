@@ -10,29 +10,49 @@ body{
     align-items: center;
     height: 100vh;
 }
-.bar{
-    height: 5vh;
-    width: 5vh;
-    border-radius: 50%;
-    position: relative;
-    left: -38%;
-    top: 4%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-    box-shadow: 0px 8px 15px black;
-}
 .player{
     width: 55vh;
     height: 90vh;
 background-color: rgb(162, 206, 243);
 border-radius: 30px ;
-display: flex;
-align-items: center;
 flex-direction: column;
 margin: auto;
-    border: 10px solid black;
+border: 10px solid black;
+}
+.bar{
+    height: 5vh;
+    width: 5vh;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    box-shadow: 0px 8px 15px black;
+    margin: 10px 0px 0px 26px;
+    cursor: pointer;
+}
+.side_bar {
+    height: 90vh;
+    width: 25vh;
+    background-color: rgba(20, 20, 20, 0.87);
+    position: fixed;
+    z-index: 1;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    margin-right: 31vh;
+    display: none;
+    flex-direction: column;
+ animation: swipe_in .8s ease-in-out;
+}
+.close_bar{
+    height: 5vh;
+    margin-top: 15px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: end;
+    font-size: 25px;
+    cursor: pointer;
+    color: rgb(92, 138, 160)
 }
 .Details{
    margin-top: 35px;
@@ -46,17 +66,21 @@ margin: auto;
 .artist{
     font-size: 15px;
 }
+.disk_div{
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+}
 #disk{
     height: 35vh;
     width: 35vh;
     border-radius: 50%;
     background-image: url(media/song1img.jpg);
-    background-size: contain;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     border:3px solid black;
-    margin-top: 45px;
 }
 #disk div{
     height: 4vh;
@@ -64,21 +88,21 @@ margin: auto;
     border-radius: 50%;
     background-color: black;
 }
-#slider{
+#slider1,#slider2,#slider3{
     width: 45vh;
 }
-.slide{
-    margin-top: 30px;
+#slide1,#slide2,#slide3{
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
 }
 .controls{
-    
-    margin-top: 10px;
-    width: 35vh;
     height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row; 
+    margin-top: 2vh;
 }
 .btn{
     background-color: rgb(252, 250, 250);
@@ -93,7 +117,7 @@ margin: auto;
     margin: 0px 20px 0px;
     box-shadow: 0px 17px 15px black;
 }
-#play{
+#play1,#play2,#play3{
     background-color: rgb(248, 245, 245);
     height: 9vh;
     width: 9vh;
@@ -105,14 +129,52 @@ margin: auto;
     cursor: pointer;
     box-shadow: 0px 17px 15px black;
 }
-.duration{
+#duration1,#duration2,#duration3{
     display: flex;
     flex-direction: row;
     font-family: "Roboto", sans-serif;
 }
-#dur_initial{
-    margin-right: 270px;
+#dur_initial1,#dur_initial2,#dur_initial3{
+    margin-left: 30px;
 }
+.song_list{
+    height: 5vh;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    color: rgb(92, 138, 160);
+    text-shadow: 5px 5px 5px rgba(128, 128, 128, 0.322);
+}
+.songno img{
+    height: 5vh;
+    width: 5vh;
+    border-radius: 50%;
+}
+.songno{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    margin-top: 20px;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition-delay: 1s;
+    background-color: rgb(114, 158, 196);
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.songno p{
+    text-decoration: none;
+    margin-left: 10px;
+}
+
 @keyframes rotate{
     0%{
         rotate: 0deg;
@@ -121,18 +183,20 @@ margin: auto;
         rotate: 360deg;
     }
 }
-@media only screen and (max-width:520px) {
-    body{
-        background-color:rgb(59, 59, 59);
+@keyframes swipe_in{
+    0%{
+        width: 0vh;
     }
-     .player{
+    100%{
+        width: 25vh;
+    }
+}
+@media only screen and (max-width:520px) {
+    .player{
         height: 90vh;
         width: 43vh;
     }
     #slider{
         width:40vh ;
-    }
-    #dur_initial {
-        margin-right: 245px;
     }
 }
